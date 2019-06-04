@@ -1,1 +1,1 @@
-add_lunch_combo syberia_tulip-userdebug
+add_lunch_combo revengeos_tulip-userdebug

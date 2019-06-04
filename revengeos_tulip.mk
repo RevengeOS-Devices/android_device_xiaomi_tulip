@@ -25,15 +25,21 @@ $(call inherit-product, device/xiaomi/tulip/device.mk)
 
 # Inherit some common Syberia stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/syberia/common.mk)
+$(call inherit-product, vendor/revengeos/config/common.mk)
+$(call inherit-product, vendor/revengeos/config/gsm.mk)
 
-PRODUCT_NAME := syberia_tulip
+PRODUCT_NAME := revengeos_tulip
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := tulip
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 6 Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+TARGET_GAPPS_ARCH := arm64
+TARGET_MINIMAL_APPS := true
+IS_PHONE := true
+REVENGEOS_BUILDTYPE := OFFICIAL
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="tulip" \
@@ -45,4 +51,3 @@ BUILD_FINGERPRINT := xiaomi/tulip/tulip:8.1.0/OPM1.171019.011/V10.2.2.0.OEKMIXM:
 
 TARGET_VENDOR := Xiaomi
 
-SYBERIA_BUILD_TYPE := OFFICIAL
